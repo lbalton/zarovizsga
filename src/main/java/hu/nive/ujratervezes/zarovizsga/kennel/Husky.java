@@ -12,7 +12,7 @@ public class Husky extends Dog{
 
     @Override
     public String getName() {
-        return name;
+        return super.getName();
     }
 
     @Override
