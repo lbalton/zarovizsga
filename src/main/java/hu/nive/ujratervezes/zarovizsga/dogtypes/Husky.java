@@ -9,4 +9,14 @@ public class Husky extends Dog{
         super(name);
         this.happiness = 0;
     }
+
+    @Override
+    void feed() {
+        this.happiness = +4;
+    }
+
+    @Override
+    void play(int hours) {
+        this.happiness =+ (hours*3);
+    }
 }

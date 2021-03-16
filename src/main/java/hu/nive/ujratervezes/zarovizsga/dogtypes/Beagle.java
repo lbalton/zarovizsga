@@ -17,6 +17,6 @@ public class Beagle extends Dog{
 
     @Override
     void play(int hours) {
-        this.happiness =+ hours*2;
+        this.happiness =+ (hours*2);
     }
 }
