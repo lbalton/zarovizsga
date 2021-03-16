@@ -1,13 +1,23 @@
-package hu.nive.ujratervezes.zarovizsga.dogtypes;
+package hu.nive.ujratervezes.zarovizsga.kennel;
 
 public class Husky extends Dog{
 
     private String name;
     private int happiness;
 
-    public Husky(String name,int happiness) {
+    public Husky(String name) {
         super(name);
         this.happiness = 0;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public int getHappiness() {
+        return happiness;
     }
 
     @Override

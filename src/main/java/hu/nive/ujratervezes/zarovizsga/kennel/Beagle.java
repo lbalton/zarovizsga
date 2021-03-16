@@ -1,18 +1,29 @@
-package hu.nive.ujratervezes.zarovizsga.dogtypes;
+package hu.nive.ujratervezes.zarovizsga.kennel;
 
 public class Beagle extends Dog{
 
     private String name;
     private int happiness;
 
-    public Beagle(String name, String name1, int happiness) {
+    public Beagle(String name) {
         super(name);
         this.happiness = 0;
     }
 
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public int getHappiness() {
+        return this.happiness;
+    }
+
     @Override
     void feed() {
-        this.happiness =+2;
+        this.happiness = +2;
     }
 
     @Override

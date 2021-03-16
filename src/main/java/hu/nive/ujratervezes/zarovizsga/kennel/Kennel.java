@@ -1,4 +1,4 @@
-package hu.nive.ujratervezes.zarovizsga.dogtypes;
+package hu.nive.ujratervezes.zarovizsga.kennel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,19 +18,20 @@ public class Kennel {
 
 
     public void feedAll(){
-
         for (Dog dog : dogs){
             dog.feed();
         }
     }
 
     public Dog findByName(String name){
+
         Dog thisDog = null;
         for (Dog dog : dogs){
             if (dog.getName().equals(name)){
                 thisDog = dog;
-            }
+            }throw new IllegalArgumentException("Dog not found" + name);
         }
+
         return thisDog;
     }
     public void playWith(String name, int hours){
