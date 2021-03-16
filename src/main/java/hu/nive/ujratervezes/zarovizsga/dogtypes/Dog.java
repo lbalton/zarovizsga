@@ -19,6 +19,9 @@ public class Dog {
         this.name = name;
     }
 
+    public int getHappiness() {
+        return happiness;
+    }
 
     void feed(){}
 

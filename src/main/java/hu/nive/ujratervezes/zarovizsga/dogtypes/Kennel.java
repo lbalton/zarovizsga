@@ -24,7 +24,34 @@ public class Kennel {
         }
     }
 
-    public
+    public Dog findByName(String name){
+        Dog thisDog = null;
+        for (Dog dog : dogs){
+            if (dog.getName().equals(name)){
+                thisDog = dog;
+            }
+        }
+        return thisDog;
+    }
+    public void playWith(String name, int hours){
 
+        for (Dog dog : dogs){
+            if (dog.getName().equals(name)){
+                dog.play(hours);
+            }
+        }
+    }
+
+    List<String> getHappyDogNames(int minHappiness){
+
+        List<String> happyDogs = new ArrayList<>();
+
+        for (Dog dog : dogs){
+            if (dog.getHappiness()>minHappiness){
+                happyDogs.add(dog.getName());
+            }
+        }
+        return happyDogs;
+    }
 
 }
